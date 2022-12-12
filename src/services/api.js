@@ -10,6 +10,7 @@ const getDataFromApi = () => {
           photo: character.image,
           name: character.name,
           specie: character.species,
+          status: character.status,
           id: character.id,
         };
       });
