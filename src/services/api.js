@@ -7,11 +7,13 @@ const getDataFromApi = () => {
     .then((data) => {
       const cleanData = data.results.map((character) => {
         return {
+          id: character.id,
           photo: character.image,
           name: character.name,
           specie: character.species,
+          planet: character.origin.name,
           status: character.status,
-          id: character.id,
+          // episodes: recorrer el array dentro de character.episode para decir en cuántos episodios aparece
         };
       });
       return cleanData;

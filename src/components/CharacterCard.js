@@ -1,6 +1,6 @@
 const CharacterCard = (props) => {
   return (
-    <li className="characters__list--card">
+    <li className="characters__list--card" key={props.character.id}>
       <a href={props.character.id}>
         <img
           className="characters__list--card__image"

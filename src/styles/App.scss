@@ -1,5 +1,13 @@
 @import "core/reset";
 
+* {
+  background-color: black;
+}
+
+.input__search {
+  background-color: white;
+}
+
 .header {
   height: 340px;
   background-image: url(../images/Rick_and_Morty_title_card.png);
