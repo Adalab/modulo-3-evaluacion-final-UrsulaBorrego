@@ -8,7 +8,6 @@ const FilterByName = (props) => {
       type="text"
       placeholder="Escribe aquí un personaje"
       onInput={handleInput}
-      onSubmit={props.handleSubmit}
       value={props.filterByName}
     />
   );

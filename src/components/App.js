@@ -19,12 +19,9 @@ function App() {
     });
   }, []);
 
-  //Función para el input del name
   const handleFilterName = (value) => {
     setFilterByName(value);
   };
-
-  // !!!!!! NO FUNCIONA HANDLESUBMIT !!!!!!
 
   //Función para que no recargar la página cada vez que damos a Enter
   const handleSubmit = (event) => {

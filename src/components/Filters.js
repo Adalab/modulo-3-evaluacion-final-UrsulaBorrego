@@ -2,11 +2,10 @@ import FilterByName from "./FilterByName";
 
 const Filters = (props) => {
   return (
-    <form>
+    <form onSubmit={props.handleSubmit}>
       <FilterByName
         filterByName={props.filterByName}
         handleFilterName={props.handleFilterName}
-        handleSubmit={props.handleSubmit}
       ></FilterByName>
     </form>
   );

@@ -13,7 +13,7 @@ const getDataFromApi = () => {
           specie: character.species,
           planet: character.origin.name,
           status: character.status,
-          // episodes: recorrer el array dentro de character.episode para decir en cuántos episodios aparece
+          episodes: character.episode.length,
         };
       });
       return cleanData;
