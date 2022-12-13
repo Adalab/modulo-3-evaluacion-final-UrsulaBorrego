@@ -11,7 +11,7 @@ const getDataFromApi = () => {
           photo: character.image,
           name: character.name,
           specie: character.species,
-          planet: character.origin.name,
+          origin: character.origin.name,
           status: character.status,
           episodes: character.episode.length,
         };

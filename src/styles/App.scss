@@ -2,14 +2,48 @@
 
 * {
   background-color: black;
-}
-
-.input__search {
-  background-color: white;
+  color: white;
 }
 
 .header {
-  height: 340px;
-  background-image: url(../images/Rick_and_Morty_title_card.png);
-  background-size: cover;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    width: 600px;
+    height: 300px;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  .input__search {
+    border-color: rgb(41, 146, 239);
+    padding-left: 5px;
+    padding-right: 85px;
+    padding-block: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.container-characters {
+  padding-inline: 90px;
+  padding-block: 30px;
+  .characters__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    justify-items: center;
+    &--card {
+      width: 200px;
+      // background-color: rgb(41, 146, 239);
+      text-decoration: none;
+      &__image {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
 }

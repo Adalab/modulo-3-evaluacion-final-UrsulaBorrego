@@ -2,7 +2,7 @@ import FilterByName from "./FilterByName";
 
 const Filters = (props) => {
   return (
-    <form onSubmit={props.handleSubmit}>
+    <form className="form" onSubmit={props.handleSubmit}>
       <FilterByName
         filterByName={props.filterByName}
         handleFilterName={props.handleFilterName}

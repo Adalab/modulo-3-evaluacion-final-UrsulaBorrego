@@ -1,13 +1,13 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, matchPath, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-//IMAGES
-// import serieLogo from "../images/Rick_and_Morty_title_card.png";
 //STYLES
 import "../styles/App.scss";
 //COMPONENTS
 import getDataFromApi from "../services/api";
+import Header from "./Header";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
+import CharacterDetail from "./CharacterDetail";
 
 function App() {
   const [dataCharacter, setDataCharacter] = useState([]);
@@ -35,20 +35,43 @@ function App() {
     );
   };
 
+  const { pathname } = useLocation();
+
+  const dataUrl = matchPath("/character/:characterId", pathname);
+
+  const characterId = dataUrl !== null ? dataUrl.params.characterId : null;
+
+  const characterFound = dataCharacter.find(
+    (character) => character.id === parseInt(characterId)
+  );
+
   return (
     <>
-      <header className="header"></header>
+      <Header></Header>
 
-      <main className="main">
-        <Filters
-          filterByName={filterByName}
-          handleFilterName={handleFilterName}
-          handleSubmit={handleSubmit}
-        ></Filters>
-        <CharacterList
-          characters={listCharacters(dataCharacter)}
-        ></CharacterList>
-      </main>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <main className="main">
+              <Filters
+                filterByName={filterByName}
+                handleFilterName={handleFilterName}
+                handleSubmit={handleSubmit}
+              ></Filters>
+              <CharacterList
+                characters={listCharacters(dataCharacter)}
+              ></CharacterList>
+            </main>
+          }
+        ></Route>
+        <Route
+          path="/character/:characterId"
+          element={
+            <CharacterDetail character={characterFound}></CharacterDetail>
+          }
+        ></Route>
+      </Routes>
     </>
   );
 }

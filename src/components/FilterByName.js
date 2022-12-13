@@ -6,7 +6,7 @@ const FilterByName = (props) => {
     <input
       className="input__search"
       type="text"
-      placeholder="Escribe aquí un personaje"
+      placeholder="Example: Morty Smith"
       onInput={handleInput}
       value={props.filterByName}
     />

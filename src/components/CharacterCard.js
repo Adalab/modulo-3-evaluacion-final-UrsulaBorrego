@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
+
 const CharacterCard = (props) => {
   return (
-    <li className="characters__list--card" key={props.character.id}>
-      <a href={props.character.id}>
+    <li key={props.character.id}>
+      <Link
+        className="characters__list--card"
+        to={`/character/${props.character.id}`}
+      >
         <img
           className="characters__list--card__image"
           src={props.character.photo}
@@ -15,7 +20,7 @@ const CharacterCard = (props) => {
         <p className="characters__list--card__status">
           {props.character.status}
         </p>
-      </a>
+      </Link>
     </li>
   );
 };
