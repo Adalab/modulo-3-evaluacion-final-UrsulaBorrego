@@ -3,13 +3,16 @@ const FilterByName = (props) => {
     props.handleFilterName(ev.target.value);
   };
   return (
-    <input
-      className="input__search"
-      type="text"
-      placeholder="Example: Morty Smith"
-      onInput={handleInput}
-      value={props.filterByName}
-    />
+    <>
+      <input
+        className="input__search"
+        type="text"
+        placeholder="Example: Rick Sanchez"
+        onInput={handleInput}
+        value={props.filterByName}
+      />
+      <p>{props.errorMessage}</p>
+    </>
   );
 };
 

@@ -33,14 +33,19 @@ function App() {
     return dataCharacter.filter((eachCharacter) =>
       eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
     );
+    // .sort();
   };
 
+  //Mensaje de error para cuando no hay personaje de lo que hemos escrito
+  const errorMessage =
+    listCharacters().length === 0
+      ? `No hay ningún personaje que coincida con la palabra:${filterByName.toLowerCase()}`
+      : null;
+
+  //Recorrido para Routes
   const { pathname } = useLocation();
-
   const dataUrl = matchPath("/character/:characterId", pathname);
-
   const characterId = dataUrl !== null ? dataUrl.params.characterId : null;
-
   const characterFound = dataCharacter.find(
     (character) => character.id === parseInt(characterId)
   );
@@ -56,10 +61,12 @@ function App() {
             <main className="main">
               <Filters
                 filterByName={filterByName}
+                errorMessage={errorMessage}
                 handleFilterName={handleFilterName}
                 handleSubmit={handleSubmit}
               ></Filters>
               <CharacterList
+                filterByName={filterByName}
                 characters={listCharacters(dataCharacter)}
               ></CharacterList>
             </main>

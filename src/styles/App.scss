@@ -19,6 +19,8 @@
 .form {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   .input__search {
     border-color: rgb(41, 146, 239);
     padding-left: 5px;
