@@ -2,22 +2,37 @@
 @import "../core/variables";
 
 .characters__detail--card {
-  background-color: black;
-  color: white;
   font-family: $principalFont;
   font-size: large;
   letter-spacing: rem(1.2);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
   &__back {
     text-decoration: none;
+    animation: animate__lightSpeedOutLeft;
+    &:hover {
+      transform: scale(1.3);
+      color: $secondaryColor;
+      transition: 0.3s;
+    }
   }
   &__image {
     width: rem(300);
+    border-radius: rem(3);
   }
   &__name {
-    font-size: rem(25);
+    font-size: rem(40);
     text-decoration: solid;
+    margin-bottom: rem(10);
+  }
+  &__specie {
+    font-size: rem(24);
+    color: $secondaryColor;
+  }
+  &__text {
+    font-size: rem(24);
+    color: $principalColor;
   }
 }

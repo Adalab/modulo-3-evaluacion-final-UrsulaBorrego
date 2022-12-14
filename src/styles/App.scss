@@ -40,7 +40,9 @@
       padding-right: rem(250);
       padding-block: rem(10);
       margin-block: rem(10);
-      // margin-right: rem(150);
+      &--errorMsg {
+        color: $principalColor;
+      }
     }
   }
   .container--select {
@@ -55,6 +57,7 @@
       padding-right: rem(60);
       padding-block: rem(10);
       margin-block: rem(10);
+      cursor: pointer;
     }
   }
 }
@@ -69,11 +72,31 @@
     justify-items: center;
     &--card {
       width: rem(200);
-      background-color: rgb(41, 146, 239);
       text-decoration: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
       &__image {
-        width: rem(180);
-        height: rem(180);
+        width: rem(190);
+        height: rem(190);
+        border-radius: rem(3);
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: $secondaryColor 0px 2px 4px 0px,
+            $secondaryColor 0px 2px 16px 0px;
+          transition: 0.5s;
+        }
+      }
+      &__name {
+        font-size: rem(20);
+      }
+      &__specie {
+        font-size: rem(18);
+        color: $secondaryColor;
+      }
+      &__status {
+        font-size: rem(18);
+        color: $principalColor;
       }
     }
   }

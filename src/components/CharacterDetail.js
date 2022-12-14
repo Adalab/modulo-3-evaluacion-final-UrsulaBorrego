@@ -5,9 +5,8 @@ const CharacterDetail = (props) => {
   return (
     <article className="characters__detail--card">
       <Link className="characters__detail--card__back" to="/">
-        ⬅Back
+        ⬅ Go back
       </Link>
-      {/* ◀ */}
       <img
         className="characters__detail--card__image"
         src={props.character.photo}
@@ -15,16 +14,16 @@ const CharacterDetail = (props) => {
         title={`Imagen de ${props.character.name}`}
       />
       <h4 className="characters__detail--card__name">{props.character.name}</h4>
-      <p className="characters__detail--card__status">
-        Status: {props.character.status}
-      </p>
       <p className="characters__detail--card__specie">
         Specie: {props.character.specie}
       </p>
-      <p className="characters__detail--card__origin">
+      <p className="characters__detail--card__text">
+        Status: {props.character.status}
+      </p>
+      <p className="characters__detail--card__text">
         Origin: {props.character.origin}
       </p>
-      <p className="characters__detail--card__episodes">
+      <p className="characters__detail--card__text">
         Episodes: {props.character.episodes}
       </p>
     </article>

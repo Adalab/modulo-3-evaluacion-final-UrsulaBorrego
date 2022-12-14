@@ -49,7 +49,7 @@ function App() {
   //Mensaje de error para cuando no hay personaje de lo que hemos escrito
   const errorMessage =
     filteredCharacters().length === 0
-      ? `There is no character that matches the word: ${filterByName.toLowerCase()}`
+      ? `There's no character that matches the word: ${filterByName.toLowerCase()}`
       : null;
 
   //Recorrido para Routes
