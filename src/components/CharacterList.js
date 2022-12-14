@@ -1,6 +1,7 @@
 import CharacterCard from "./CharacterCard";
 
 const CharacterList = (props) => {
+  //.sort para ordenar alfabéticamente las tarjetas
   props.characters.sort(function (a, b) {
     if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
     if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;

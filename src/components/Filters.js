@@ -1,4 +1,5 @@
 import FilterByName from "./FilterByName";
+import FilterBySpecie from "./FilterBySpecie";
 
 const Filters = (props) => {
   return (
@@ -8,6 +9,9 @@ const Filters = (props) => {
         errorMessage={props.errorMessage}
         handleFilterName={props.handleFilterName}
       ></FilterByName>
+      <FilterBySpecie
+        handleFilterSpecie={props.handleFilterSpecie}
+      ></FilterBySpecie>
     </form>
   );
 };

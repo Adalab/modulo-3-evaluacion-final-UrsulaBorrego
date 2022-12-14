@@ -12,6 +12,7 @@ import CharacterDetail from "./CharacterDetail";
 function App() {
   const [dataCharacter, setDataCharacter] = useState([]);
   const [filterByName, setFilterByName] = useState("");
+  const [filterBySpecie, setFilterBySpecie] = useState("all");
 
   useEffect(() => {
     getDataFromApi().then((cleanData) => {
@@ -23,22 +24,31 @@ function App() {
     setFilterByName(value);
   };
 
+  const handleFilterSpecie = (value) => {
+    setFilterBySpecie(value);
+  };
+
   //Función para que no recargar la página cada vez que damos a Enter
   const handleSubmit = (event) => {
     event.preventDefault();
   };
 
   //Función para filtrar y pintar las tarjetas
-  const listCharacters = () => {
-    return dataCharacter.filter((eachCharacter) =>
-      eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
-    );
-    // .sort();
+  const filteredCharacters = () => {
+    return dataCharacter
+      .filter((eachCharacter) =>
+        eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
+      )
+      .filter((eachCharacter) => {
+        return filterBySpecie === "all"
+          ? true
+          : eachCharacter.specie === filterBySpecie;
+      });
   };
 
   //Mensaje de error para cuando no hay personaje de lo que hemos escrito
   const errorMessage =
-    listCharacters().length === 0
+    filteredCharacters().length === 0
       ? `No hay ningún personaje que coincida con la palabra:${filterByName.toLowerCase()}`
       : null;
 
@@ -63,11 +73,12 @@ function App() {
                 filterByName={filterByName}
                 errorMessage={errorMessage}
                 handleFilterName={handleFilterName}
+                handleFilterSpecie={handleFilterSpecie}
                 handleSubmit={handleSubmit}
               ></Filters>
               <CharacterList
                 filterByName={filterByName}
-                characters={listCharacters(dataCharacter)}
+                characters={filteredCharacters(dataCharacter)}
               ></CharacterList>
             </main>
           }
