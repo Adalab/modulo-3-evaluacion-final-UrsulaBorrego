@@ -3,7 +3,8 @@ const FilterByName = (props) => {
     props.handleFilterName(ev.target.value);
   };
   return (
-    <>
+    <div className="container--input">
+      <label className="input__msg">Enter a character here</label>
       <input
         className="input__search"
         type="text"
@@ -11,8 +12,8 @@ const FilterByName = (props) => {
         onInput={handleInput}
         value={props.filterByName}
       />
-      <p>{props.errorMessage}</p>
-    </>
+      <p className="input__search--errorMsg">{props.errorMessage}</p>
+    </div>
   );
 };
 

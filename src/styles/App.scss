@@ -3,6 +3,7 @@
 
 * {
   background-color: black;
+  background-image: url(../images/space-background.jpg);
   color: white;
   font-family: $principalFont;
   font-size: large;
@@ -14,27 +15,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .logo {
-    width: rem(600);
-    height: rem(300);
+  &__logo {
+    width: rem(700);
+    height: rem(400);
   }
 }
 
 .form {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
-  .input__search {
-    border-color: $principalColor;
-    padding-left: rem(5);
-    padding-right: rem(85);
-    padding-block: rem(10);
-    margin-bottom: rem(20);
+  margin-bottom: rem(20);
+  margin-inline: rem(20);
+  .container--input {
+    display: flex;
+    flex-direction: column;
+    .input__msg {
+      padding-left: rem(5);
+    }
+    .input__search {
+      border-color: $principalColor;
+      padding-left: rem(15);
+      padding-right: rem(250);
+      padding-block: rem(10);
+      margin-block: rem(10);
+      // margin-right: rem(150);
+    }
+  }
+  .container--select {
+    display: flex;
+    flex-direction: column;
+    .select__msg {
+      padding-left: rem(5);
+    }
+    .select__specie {
+      border-color: $principalColor;
+      padding-left: rem(15);
+      padding-right: rem(60);
+      padding-block: rem(10);
+      margin-block: rem(10);
+    }
   }
 }
 
-.container-characters {
+.container__characters {
   padding-inline: rem(90);
   padding-block: rem(30);
   .characters__list {
@@ -44,11 +69,11 @@
     justify-items: center;
     &--card {
       width: rem(200);
-      // background-color: rgb(41, 146, 239);
+      background-color: rgb(41, 146, 239);
       text-decoration: none;
       &__image {
-        width: rem(200);
-        height: rem(200);
+        width: rem(180);
+        height: rem(180);
       }
     }
   }

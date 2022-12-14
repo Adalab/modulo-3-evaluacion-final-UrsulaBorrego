@@ -13,7 +13,7 @@ const CharacterList = (props) => {
   });
 
   return (
-    <section className="container-characters">
+    <section className="container__characters">
       <ul className="characters__list">{characterElement}</ul>
     </section>
   );
