@@ -19,20 +19,25 @@
     }
   }
   &__image {
-    width: rem(300);
+    width: rem(250);
     border-radius: rem(3);
   }
-  &__name {
-    font-size: rem(40);
-    text-decoration: solid;
-    margin-bottom: rem(10);
-  }
-  &__specie {
-    font-size: rem(24);
-    color: $secondaryColor;
-  }
   &__text {
-    font-size: rem(24);
-    color: $principalColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--name {
+      font-size: rem(40);
+      text-decoration: solid;
+      margin-bottom: rem(10);
+    }
+    &--specie {
+      font-size: rem(24);
+      color: $secondaryColor;
+    }
+    &--others {
+      font-size: rem(24);
+      color: $principalColor;
+    }
   }
 }
