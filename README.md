@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# -Rick and Morty Search-
+![ONQHIVFLKVAKDKQC5WEQA4MMMI](https://user-images.githubusercontent.com/113980852/207713886-fd06aff0-4a28-420b-832d-175b3d9acd5b.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ¡Bienvenida/o al buscador de personajes de la serie Rick y Morty!
 
-## Available Scripts
+Mi nombre es Úrsula Borrego Toledano, y crear este buscador ha sido para mí todo un nuevo reto.
 
-In the project directory, you can run:
+### Para su creación he utilizado React. Te cuento en qué consiste y qué puedes hacer en él:
 
-### `npm start`
+Al abrir la página encontrarás un listado con tarjetas de las y los personajes de la serie, que contienen su foto, su especie, y si está vivo o muerto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Como es un buscador, la página contiene un input, en el que podrás poner el nombre del personaje que buscas, o alguna parte que recuerdes de éste, y, según escribes, te devolverá las tarjetas de las y los personajes de la serie que contengan lo que escribas. Sin embargo, si borras lo escrito desaparecerán el filtro que se le estaba haciendo a las tarjetas, y por lo tanto aparecerán todas de nuevo. Y si escribes un texto que no coincida con ningún personaje, te aparecerá un mensaje de aviso, para que puedas borrar y volver a intentarlo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A su vez, he añadido un select con el que podrás filtrar las y los personajes por especie, ya sean personas, aliens, o cualquiera de las dos.
 
-### `npm test`
+Si sitúas tu cursor encima de alguna de las tarjetas, podrás comprobar cómo cambian sus estilos, para saber que la estás seleccionando.
+  
+Si clickas en ella, te llevará a una nueva página mediante React Router Dom, en la que podrás la imagen y la información de manera individual y a mayor tamaño. Además de las características anteriores de especie y estatus, encontrarás que también puedes saber el planeta de origen y en cuántos episodios ha aparecido.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Si decides volver al buscador, sobre el personaje encontrarás un botón con una flecha, que dice "Go back", y que indica que si clickas, cambiando su estilo y su tamaño, podrás volver a la página anterior.
+  
+Si vuelves al buscador no habrás perdido tu anterior búsqueda, de tal modo, que tanto si has escrito en el input, como si seleccionaste alguna especie en el select, estos seguirán marcados, y aparecerán únicamente las tarjetas que cumplan con esas condiciones.
 
-### `npm run build`
+La página es muy intuitiva, así que te invito a probar tú misma las posibles cosas que puedes hacer en ella. Seguiré haciéndole mejoras en el futuro.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ¡Gracias por llegar hasta aquí!
+### Te dejo un enlace a mi red profesional de LinkedIn donde estaré encantada de recibirte.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://www.linkedin.com/in/ursulaborregotoledano/
