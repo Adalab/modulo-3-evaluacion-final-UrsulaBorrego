@@ -5,8 +5,8 @@ const FilterBySpecie = (props) => {
 
   return (
     <select name="specie" id="specie" onChange={handleChange}>
-      <option value="all">Todas</option>
-      <option value="Human">Persona</option>
+      <option value="all">All</option>
+      <option value="Human">Human</option>
       <option value="Alien">Alien</option>
     </select>
   );

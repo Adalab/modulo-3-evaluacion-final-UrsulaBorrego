@@ -1,0 +1,11 @@
+// fonts
+$principalFont: "PT Sans Narrow", sans-serif;
+
+// colors
+$principalColor: rgb(41, 146, 239);
+
+// sizes rem
+$defaultFontSize: 16;
+@function rem($pixels) {
+  @return ($pixels / $defaultFontSize * 1rem);
+}

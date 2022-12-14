@@ -1,0 +1,23 @@
+@import "../core/reset";
+@import "../core/variables";
+
+.characters__detail--card {
+  background-color: black;
+  color: white;
+  font-family: $principalFont;
+  font-size: large;
+  letter-spacing: rem(1.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__back {
+    text-decoration: none;
+  }
+  &__image {
+    width: rem(300);
+  }
+  &__name {
+    font-size: rem(25);
+    text-decoration: solid;
+  }
+}

@@ -1,8 +1,12 @@
 @import "core/reset";
+@import "./core/variables";
 
 * {
   background-color: black;
   color: white;
+  font-family: $principalFont;
+  font-size: large;
+  letter-spacing: rem(1.2);
 }
 
 .header {
@@ -11,8 +15,8 @@
   justify-content: center;
   align-items: center;
   .logo {
-    width: 600px;
-    height: 300px;
+    width: rem(600);
+    height: rem(300);
   }
 }
 
@@ -22,29 +26,29 @@
   flex-direction: column;
   align-items: center;
   .input__search {
-    border-color: rgb(41, 146, 239);
-    padding-left: 5px;
-    padding-right: 85px;
-    padding-block: 10px;
-    margin-bottom: 20px;
+    border-color: $principalColor;
+    padding-left: rem(5);
+    padding-right: rem(85);
+    padding-block: rem(10);
+    margin-bottom: rem(20);
   }
 }
 
 .container-characters {
-  padding-inline: 90px;
-  padding-block: 30px;
+  padding-inline: rem(90);
+  padding-block: rem(30);
   .characters__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px;
     justify-items: center;
     &--card {
-      width: 200px;
+      width: rem(200);
       // background-color: rgb(41, 146, 239);
       text-decoration: none;
       &__image {
-        width: 200px;
-        height: 200px;
+        width: rem(200);
+        height: rem(200);
       }
     }
   }
