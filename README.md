@@ -16,6 +16,8 @@ A su vez, he añadido un select con el que podrás filtrar las y los personajes 
 Si sitúas tu cursor encima de alguna de las tarjetas, podrás comprobar cómo cambian sus estilos, para saber que la estás seleccionando.
   
 Si clickas en ella, te llevará a una nueva página mediante React Router Dom, en la que podrás la imagen y la información de manera individual y a mayor tamaño. Además de las características anteriores de especie y estatus, encontrarás que también puedes saber el planeta de origen y en cuántos episodios ha aparecido.
+
+Si decides volver al buscador, sobre el personaje encontrarás un botón con una flecha, que dice "Go back", y que indica que si clickas, cambiando su estilo y su tamaño, podrás volver a la página anterior.
   
 Si vuelves al buscador no habrás perdido tu anterior búsqueda, de tal modo, que tanto si has escrito en el input, como si seleccionaste alguna especie en el select, estos seguirán marcados, y aparecerán únicamente las tarjetas que cumplan con esas condiciones.
 
