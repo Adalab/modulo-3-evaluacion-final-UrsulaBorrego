@@ -12,6 +12,7 @@ import CharacterDetail from "./CharacterDetail";
 function App() {
   const [dataCharacter, setDataCharacter] = useState([]);
   const [filterByName, setFilterByName] = useState("");
+  const [filterByEpisodes, setFilterByEpisodes] = useState(0);
   const [filterBySpecie, setFilterBySpecie] = useState("all");
 
   useEffect(() => {
@@ -22,6 +23,10 @@ function App() {
 
   const handleFilterName = (value) => {
     setFilterByName(value);
+  };
+
+  const handleFilterEpisodes = (value) => {
+    setFilterByEpisodes(value);
   };
 
   const handleFilterSpecie = (value) => {
@@ -39,6 +44,11 @@ function App() {
       .filter((eachCharacter) =>
         eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
       )
+      .filter((eachCharacter) => {
+        return filterByEpisodes === 0
+          ? true
+          : eachCharacter.episodes === parseInt(filterByEpisodes);
+      })
       .filter((eachCharacter) => {
         return filterBySpecie === "all"
           ? true
@@ -73,6 +83,7 @@ function App() {
                 filterByName={filterByName}
                 errorMessage={errorMessage}
                 handleFilterName={handleFilterName}
+                handleFilterEpisodes={handleFilterEpisodes}
                 handleFilterSpecie={handleFilterSpecie}
                 handleSubmit={handleSubmit}
               ></Filters>
